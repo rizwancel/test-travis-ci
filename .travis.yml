@@ -1,0 +1,9 @@
+dist: focal
+arch: ppc64le
+group: dev
+script:
+  - rm -rf hello_world
+  - /opt/at14.0/bin/gcc hello_world.c -o hello_world
+  - ./hello_world
+  - file hello_world
+  - lsb_release -a
