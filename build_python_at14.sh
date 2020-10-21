@@ -17,8 +17,8 @@ echo "Python local = $PYTHON_LOCAL"
 
 echo "PWD = ${PWD}"
 
-#./configure  --with-lto --enable-optimizations --enable-ipv6 --enable-loadable-sqlite-extensions --prefix=${PYTHON_LOCAL} --exec-prefix=${PYTHON_LOCAL}  > configure_logs 2>&1
-./configure  --with-lto --enable-ipv6 --enable-loadable-sqlite-extensions --prefix=${PYTHON_LOCAL} --exec-prefix=${PYTHON_LOCAL}
+./configure  --with-lto --enable-optimizations --enable-ipv6 --enable-loadable-sqlite-extensions --prefix=${PYTHON_LOCAL} --exec-prefix=${PYTHON_LOCAL}  > configure_logs 2>&1
+#./configure  --with-lto --enable-ipv6 --enable-loadable-sqlite-extensions --prefix=${PYTHON_LOCAL} --exec-prefix=${PYTHON_LOCAL}
 
 make clean profile-removal
 make -j`nproc`

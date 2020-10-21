@@ -3,5 +3,6 @@ arch: ppc64le
 group: dev
 script:
   - nproc
-  - sh build_python_at14.sh
+  - free -m
+  - sudo sh build_python_at14.sh
 
