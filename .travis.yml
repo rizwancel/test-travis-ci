@@ -2,7 +2,6 @@ dist: focal
 arch: ppc64le
 group: dev
 script:
-  - nproc
   - free -m
   - sudo sh build_python_at14.sh
 
