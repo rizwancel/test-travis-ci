@@ -2,5 +2,5 @@ dist: focal
 arch: ppc64le
 group: dev
 script:
-  - sh build_python_at.sh
+  - travis_wait 120 sh build_python_at.sh
 

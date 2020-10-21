@@ -17,7 +17,7 @@ echo "PWD = ${PWD}"
 ./configure CC="/opt/at14.0/bin/powerpc64le-linux-gnu-gcc" CXX="/opt/at14.0/bin/powerpc64le-linux-gnu-g++" --with-lto --enable-optimizations --enable-ipv6 --enable-loadable-sqlite-extensions --prefix=${PYTHON_LOCAL} --exec-prefix=${PYTHON_LOCAL}
 
 make clean profile-removal
-make -j 40
+make -j`nproc`
 make install
 ln -s python3 ${PYTHON_LOCAL}/bin/python
 
