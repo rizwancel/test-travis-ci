@@ -5,13 +5,13 @@ working_dir=${PWD}
 
 apt-get install -y libssl-dev libreadline-dev libreadline-dev libbz2-dev libgdbm-dev libsqlite3-dev zlib1g-dev liblzma-dev libtk-img-dev libffi-dev liblzma-dev
 
-wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tgz
+wget https://www.python.org/ftp/python/3.7.8/Python-3.7.8.tgz
 
-tar -xf Python-3.7.7.tgz
+tar -xf Python-3.7.8.tgz
 
-cd Python-3.7.7
+cd Python-3.7.8
 
-PYTHON_LOCAL=/opt/python377-at14
+PYTHON_LOCAL=/opt/python378-at14
 
 echo "Python local = $PYTHON_LOCAL"
 
