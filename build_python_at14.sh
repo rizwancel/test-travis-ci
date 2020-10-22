@@ -5,13 +5,13 @@ working_dir=${PWD}
 
 apt-get install -y libssl-dev libreadline-dev libreadline-dev libbz2-dev libgdbm-dev libsqlite3-dev zlib1g-dev liblzma-dev libtk-img-dev libffi-dev liblzma-dev
 
-wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz
+wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tgz
 
-tar -xf Python-3.6.8.tgz
+tar -xf Python-3.7.7.tgz
 
-cd Python-3.6.8
+cd Python-3.7.7
 
-PYTHON_LOCAL=/opt/python368-at14
+PYTHON_LOCAL=/opt/python377-at14
 
 echo "Python local = $PYTHON_LOCAL"
 
@@ -33,5 +33,5 @@ python3 ${working_dir}/hell_world.py
 echo "Running hello world Program"
 python3 ${working_dir}/hell_world.py
 
-file ${PYTHON_LOCAL}/bin/python3.6
+file ${PYTHON_LOCAL}/bin/python3.7
 
