@@ -6,5 +6,5 @@ script:
   - free -m
   - nproc
   - ls /opt/at14.0/bin/
-  - sudo sh build_python_at14.sh
+  - sudo sh build_python_cross_bionic_focal.sh
 
