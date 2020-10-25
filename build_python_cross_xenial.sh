@@ -10,17 +10,24 @@ wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tgz
 tar -xf Python-3.8.0.tgz
 
 cd Python-3.8.0
-
-#PYTHON_LOCAL=/home/rizwan/DevOps/Travis/python366-at14
-PYTHON_LOCAL=/opt/ppc-python380
-
 echo "Python local = $PYTHON_LOCAL"
-
 echo "PWD = ${PWD}"
 
-export PATH=$PATH:/opt/at12.0/bin/
-./configure --host=powerpc64le-linux-gnu --build=i586-linux-gnu --enable-optimizations --disable-ipv6 --prefix=/opt/pcross ac_cv_file__dev_ptc=no ac_cv_have_long_long_format=yes ac_cv_file__dev_ptmx=no
+PYTHON_LOCAL=/opt/python380-amd64
+./configure --enable-optimizations --prefix=${PYTHON_LOCAL} --exec-prefix=${PYTHON_LOCAL}
+make clean profile-removal
+make -j`nproc`
+make install
+export LD_LIBRARY_PATH=${PYTHON_LOCAL}/lib:${LD_LIBRARY_PATH}
+export PATH=${PYTHON_LOCAL}/bin:${PATH}
+python3.8 -V
+make distclean
 
+
+PYTHON_LOCAL=/opt/python380-ppc
+
+export PATH=$PATH:/opt/at12.0/bin/
+./configure --host=powerpc64le-linux-gnu --build=i586-linux-gnu --enable-optimizations --disable-ipv6 --prefix=${PYTHON_LOCAL} --exec-prefix=${PYTHON_LOCAL} ac_cv_file__dev_ptc=no ac_cv_have_long_long_format=yes ac_cv_file__dev_ptmx=no
 make clean profile-removal
 make -j`nproc`
 make install
