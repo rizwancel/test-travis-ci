@@ -1,10 +1,10 @@
-dist: bionic
+dist: xenial
 arch: amd64
 virt: lxd
 group: edge
 script:
   - free -m
   - nproc
-  - ls /opt/at14.0/bin/
-  - sudo sh build_python_cross_bionic_focal.sh
+  - ls /opt/at12.0/bin/
+  - sudo sh build_python_cross_xenial.sh
 

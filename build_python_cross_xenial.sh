@@ -23,6 +23,7 @@ export PATH=${PYTHON_LOCAL}/bin:${PATH}
 python3.8 -V
 make distclean
 
+ls /opt/python380-amd64/bin/
 
 PYTHON_LOCAL=/opt/python380-ppc
 
@@ -31,6 +32,8 @@ export PATH=$PATH:/opt/at12.0/bin/
 make clean profile-removal
 make -j`nproc`
 make install
+
+ls /opt/python380-ppc/bin/
 
 file ${PYTHON_LOCAL}/bin/python3.8 
 
