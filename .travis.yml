@@ -1,5 +1,6 @@
 dist: bionic
 arch: ppc64le
+virt: lxd
 group: edge
 script:
   - free -m
