@@ -1,10 +1,10 @@
-dist: xenial
-arch: amd64
-virt: lxd
+dist: bionic
+arch: ppc64le
 group: edge
 script:
   - free -m
   - nproc
-  - ls /opt/at12.0/bin/
-  - sudo sh build_python_cross_xenial.sh
+  - ls /opt
+  - ls /opt/at14.0/bin/
+  - sudo sh build_python_at14.sh
 
