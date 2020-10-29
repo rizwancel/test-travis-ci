@@ -1,7 +1,6 @@
 dist: bionic
 arch: ppc64le
-virt: lxd
-group: edge
+group: dev
 script:
   - free -m
   - nproc
